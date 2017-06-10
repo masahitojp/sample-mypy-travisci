@@ -1,0 +1,14 @@
+language: python
+sudo: false
+python:
+  - "3.6"
+install:
+  - "pip install nose coverage coveralls"
+  - "pip install git+https://github.com/landscapeio/pylint-plugin-utils.git@develop"
+  - "pip install git+https://github.com/landscapeio/pylint-common.git@develop"
+  - "pip install git+https://github.com/landscapeio/pylint-celery.git@develop"
+  - "pip install git+https://github.com/landscapeio/pylint-django.git@develop"
+  - "pip install git+https://github.com/landscapeio/requirements-detector.git@develop"
+  - "pip install --editable ."
+script:
+  - "mypy ."
