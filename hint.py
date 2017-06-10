@@ -14,7 +14,7 @@ class Manager:
         return self._emp.name
 
 
-employee: Employee = Employee(name='Guido', id='x')
+employee: Employee = Employee(name='Guido', id=5)
 m: Manager = Manager(employee)
 
 print(m.greeting())
